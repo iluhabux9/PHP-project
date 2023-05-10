@@ -15,8 +15,20 @@
 <body>
    
 <!-- Шапка -->
-<header>
-
+<header class="header">
+<div class="header-panel">
+    <form>
+        <input type="email" placeholder="Введите Email">
+        <input type="password" placeholder="Введите Password">
+        <button type="submit">Войти</button>
+    </form>
+        <div class="name_theme">
+         <h2 class="titleProject">Фотогалерея - Всякий хлам</h2>
+      </div>
+            <div class="logo">
+                <img src="#" alt="логотип">
+            </div>
+</div>
 </header>
 
 <!-- Основной контент -->
