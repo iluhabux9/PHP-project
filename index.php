@@ -23,7 +23,7 @@
         <button type="submit">Войти</button>
     </form>
         <div class="name_theme">
-         <h2 class="titleProject">Фотогалерея - Всякий хлам</h2>
+         <h2 class="titleProject">Фотогалерея - Мой Хлам</h2>
       </div>
             <div class="logo">
                 <img src="#" alt="логотип">
@@ -31,8 +31,25 @@
 </div>
 </header>
 
-<!-- Основной контент -->
+<!-- Основной контект -->
 <main> 
+<!-- Все сортировки -->
+<div class="sort_all">
+    <!-- Сортировка по дате -->
+    <div class="sort_by_date">
+
+<form action="index.php" method="get">
+<label for="sort">Сортировать по дате добавления:</label>
+<select name="sort" id="sort">
+  <option value="asc">По возрастанию</option>
+  <option value="desc">По убыванию</option>
+</select>
+<button type="submit">Сортировать</button>
+</form>
+
+    </div>
+
+</div>
 
 </main>
 
@@ -46,6 +63,7 @@
 
 <?php
 require_once ("config.php");
+require_once ("image.php");
 
 // Соединяем с базой данных
 $mysqli = new mysqli(HOST, USER, PASSWORD, DATABASE);
@@ -68,11 +86,10 @@ if(!$result){
 echo '<ul class="header-menu">';
 while ($row = $result->fetch_assoc()) {
     echo '<li><span class="category-item" data-category-id="' . $row['id_category'] . '">' . $row['name_category'] . '</span></li>';
-}
-echo '</ul>';
+} echo '</ul>';
 
 
-
+// Закрываем соединение с базой данных
 $mysqli->close();
 
 ?>

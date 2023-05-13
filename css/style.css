@@ -11,23 +11,32 @@ html {
   font-family: 'dm_sansregular', Arial, sans-serif;
 }
 
-/* Работа с панелью авторизации */
+/* Работа с шапкой включая панель авторизации */
 
-.header-panel {
+.header-panel {            /* Расположение элементов внутри панели */
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
 }
 
-.header-panel {
+.header-panel {            /* Обводка и расстояние */
   border: 1px solid #ccc;
-  padding: 15px;
+  padding: 10px;
+  margin-bottom: 60px;
 }
 
 /* Работа с элементами категории */
 
+.header-menu {            /* Расположение элементов категорий */
+position: absolute;
+top: 45px;
+left: 0;
+width: 100%;
+z-index: 999;
+}
+
 .header-menu {
-  display: flex;
+  display: flex;           /* Расположение элементов категорий - расстояние между ними */
   justify-content: space-around;
   align-items:center;
   list-style:none;
@@ -35,8 +44,7 @@ html {
   margin-top: 20px;
 }
 
-.category-item {
-  cursor:pointer;
+.category-item {       /* Размер и эффекты для категорий */
   font-size:20px;
   padding: 10px;
   margin: 0 10px;
@@ -45,6 +53,63 @@ html {
   color: #333;
 }
 
-.category-item:hover {
-  background-color: #ddd;
+/* Работа с фотографиями */
+
+.photoGallery {  /* Расположение фотографий в основной части */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin-top: 100px;
+  margin-left: 3%;
 }
+
+.photo-item img {  /* Размер фотографий */
+  width: 80%;
+  height: auto;
+  }
+
+.photo-title {    /* Название под фото */
+  text-align: center;
+  margin-right: 15%;
+}
+
+.photo-item a {
+  display: block;    /* Делаем ссылки на скачивание блоком и выравниваем */
+  text-align: center;
+  margin-right: 15%;
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(74, 80, 252);          /* Стили для кнопок */
+  font-size: 20px;
+}
+
+.photo-item a:hover {   /* При наведении на кнопку загрузки */
+  color: rgb(103, 106, 196);
+}
+
+
+/* Расположение всех сортировок (их размещение, расстояния) */
+
+.sort_all {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin-top: 100px;
+  margin-left: 3%;
+}
+
+/* Сортировка по дате добавления */
+
+.sort_by_date label {
+ margin-right: 5px;
+ margin-bottom: 5px;
+ display: inline-block;
+}
+.sort_by_date select {
+margin-right: 10px;
+display: inline-block;
+}
+.sort_by_date button {
+ margin-right: 5px;
+}
+/* Расположение элементов относительно друг друга, без inline-block не сработает */
