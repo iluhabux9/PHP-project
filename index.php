@@ -13,22 +13,31 @@
 
 
 <body>
-   
-<!-- Шапка -->
+   <!-- Шапка включая название, лого и панель авторизации -->
 <header class="header">
-<div class="header-panel">
-    <form>
-        <input type="email" placeholder="Введите Email">
-        <input type="password" placeholder="Введите Password">
-        <button type="submit">Войти</button>
+  <div class="header-top"> <!-- панель авторизации и фраза добро пожаловать -->
+    <?php
+      session_start();
+      if(isset($_SESSION['username'])) {
+        echo "<div class='welcome'>Добро пожаловать ".$_SESSION['username']."</div>";
+        echo "<a href='logout.php' class='logout'>Выйти из аккаунта</a>";
+      } else { 
+    ?>
+    <form method="POST" action="login.php" class="login-form">
+      <input type="email" placeholder="Введите Email" name="email">
+      <input type="password" placeholder="Введите Password" name="password">
+      <button type="submit">Войти</button>
     </form>
-        <div class="name_theme">
-         <h2 class="titleProject">Фотогалерея - Мой Хлам</h2>
-      </div>
-            <div class="logo">
-                <img src="#" alt="логотип">
-            </div>
-</div>
+    <?php } ?>
+  </div>
+  <div class="header-bottom"> <!-- Название -->
+    <div class="name_theme">
+      <h2 class="titleProject">Фотогалерея - Мой Хлам</h2>
+    </div>
+    <div class="logo"> <!-- Логотип -->
+      <img src="#" alt="логотип">
+    </div>
+  </div>
 </header>
 
 <!-- Основной контект -->
@@ -61,11 +70,13 @@
 
 </body>
 
-<?php
-require_once ("config.php");
-require_once ("image.php");
 
-// Соединяем с базой данных
+
+<!--  Соединяем с базой данных -->
+<?php
+       require_once ("config.php");
+       require_once ("image.php");
+
 $mysqli = new mysqli(HOST, USER, PASSWORD, DATABASE);
 if($mysqli->connect_error) {
     exit("Ошибка подключения к базе данных:".$mysqli->connect_error);

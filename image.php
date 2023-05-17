@@ -20,6 +20,19 @@ if (!$result) {
             <a href="download.php?img_url=<?php echo $row['img_url']; ?>" download="photo.jpg">Скачать</a> <!-- a есть ссылка на скачивание фото -->
             <img src="<?php echo $row['img_url']; ?>" alt="<?php echo $row['title']; ?>">
             <p class="photo-title"><?php echo $row['title']; ?></p> <!-- p есть название фото -->
+
+            <button class="btn-primary">More info</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                    <img id="modal-img" src="" alt="">
+                    <div id="modal-info">
+                        <h2 id="modal-title"><?php echo $row['title']; ?> </h2>
+                        <p id="modal-description"><?php echo 'description - ' . $row['description']; ?></p>
+                        <p id="modal-date"><?php echo 'photo upload date ' . $row['upload_date']; ?></p>
+                    </div>
+                </div>
+            </div>
         </div>
     <?php } ?>
 </div>
