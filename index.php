@@ -58,6 +58,24 @@
 
     </div>
 
+
+  <div class="upload">
+
+  <form action="upload.php" method="POST" enctype="multipart/form-data">
+    <input type="text" name="title" placeholder="Название">
+    <textarea name="description" placeholder="Описание"></textarea>
+    <select name="category">
+        <option value="1">Category 1</option>
+        <option value="2">Category 2</option>
+        <option value="3">Category 3</option>
+    </select>
+    <input type="file" name="photo">
+    <input type="datetime-local" name="upload_date" placeholder="Дата и время">
+    <button type="submit" name="submit">Upload</button>
+  </form>
+
+      </div>
+
 </div>
 
 </main>
