@@ -28,9 +28,10 @@ if (!$result) {
                 <span class="close">&times;</span>
                     <img id="modal-img" src="" alt="">
                     <div id="modal-info">
-                        <h2 id="modal-title"><?php echo $row['title']; ?> </h2> <a href="download.php?img_url=<?php echo $row['img_url']; ?>" download="photo.jpg">Скачать</a>
-                        <p id="modal-description"><?php echo 'description - ' . $row['description']; ?></p>
-                        <p id="modal-date"><?php echo 'photo upload date ' . $row['upload_date']; ?></p>
+                        <h2 id="modal-title"><?php echo $row['title']; ?> </h2>
+                        <p id="modal-description"><?php echo '' . $row['description']; ?></p>
+                        <p id="modal-date"><?php echo 'Дата и время загрузки: ' . $row['upload_date']; ?></p>
+                        <a href="download.php?img_url=<?php echo $row['img_url']; ?>" download="photo.jpg">Скачать</a>
                     </div>
                 </div>
             </div>

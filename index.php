@@ -50,8 +50,8 @@
 <form action="index.php" method="get">
 <label for="sort">Сортировать по дате добавления:</label>
 <select name="sort" id="sort">
-  <option value="asc">По возрастанию</option>
-  <option value="desc">По убыванию</option>
+  <option value="asc">Сначала старые</option>
+  <option value="desc">Сначала новые</option>
 </select>
 <button type="submit">Сортировать</button>
 </form>
@@ -65,9 +65,9 @@
     <input type="text" name="title" placeholder="Название">
     <textarea name="description" placeholder="Описание"></textarea>
     <select name="category">
-        <option value="1">Pets</option>
-        <option value="2">Rare and exotic</option>
-        <option value="3">Wild animals</option>
+        <option value="1">Wild animals</option>
+        <option value="2">Pets</option>
+        <option value="3">Rare and exotic animals</option>
     </select>
     <input type="file" name="photo">
     <input type="datetime-local" name="upload_date" placeholder="Дата и время">

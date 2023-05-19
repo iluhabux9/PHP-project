@@ -45,7 +45,6 @@ z-index: 1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 70px;
-  margin-left: 15px;
 }
 
 .photo-item {
@@ -56,8 +55,9 @@ z-index: 1;
 }
 
 .photo-item img {  /* Размер фотографий */
-  width: 75%;
+  width: 80%;
   height: auto;
+  margin-left: 10px;
   }
 
 .photo-title {    /* Название под фото */
@@ -72,6 +72,7 @@ z-index: 1;
   cursor: pointer;
   color: rgb(74, 80, 252);          /* Стили для кнопок */
   font-size: 20px;
+  margin-top: 30px;
 }
 
 .photo-item a:hover {   /* При наведении на кнопку загрузки */
@@ -107,7 +108,7 @@ display: inline-block;
 
 /* Кнопка сортировать */
 .sort_by_date button {
-
+ 
 }
 /* Расположение элементов относительно друг друга, без inline-block не сработает */
 
@@ -214,7 +215,7 @@ select {
 }
 
 .btn-primary {
-  margin-top: 7px;   /* Расположение кнопки подробнее и ее свойства */
+  margin-top: 3px;   /* Расположение кнопки подробнее и ее свойства */
   padding: 1.5px;
   background-color: black;
   color: #ffffff;
