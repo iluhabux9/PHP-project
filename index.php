@@ -32,17 +32,17 @@
   </div>
   <div class="header-bottom"> <!-- Название -->
     <div class="name_theme">
-      <h2 class="titleProject">Фотогалерея - Мой Хлам</h2>
+      <h2 class="titleProject">Фотогалерея - Животный Мир</h2>
     </div>
     <div class="logo"> <!-- Логотип -->
-      <img src="#" alt="логотип">
+      <img src="img/logo.jpg" alt="логотип">
     </div>
   </div>
 </header>
 
 <!-- Основной контект -->
 <main> 
-<!-- Все сортировки -->
+<!-- Сортировка и загрузка -->
 <div class="sort_all">
     <!-- Сортировка по дате -->
     <div class="sort_by_date">
@@ -58,16 +58,16 @@
 
     </div>
 
-
+  <!-- Загрузка фото -->
   <div class="upload">
 
   <form action="upload.php" method="POST" enctype="multipart/form-data">
     <input type="text" name="title" placeholder="Название">
     <textarea name="description" placeholder="Описание"></textarea>
     <select name="category">
-        <option value="1">Category 1</option>
-        <option value="2">Category 2</option>
-        <option value="3">Category 3</option>
+        <option value="1">Pets</option>
+        <option value="2">Rare and exotic</option>
+        <option value="3">Wild animals</option>
     </select>
     <input type="file" name="photo">
     <input type="datetime-local" name="upload_date" placeholder="Дата и время">

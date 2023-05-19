@@ -83,35 +83,52 @@ z-index: 1;
 
 .sort_all {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 50px;
-  margin-top: 125px;
-  margin-left: 20%;
+  margin-top: 100px;
+  margin-left: 3%;
 }
 
 /* Сортировка по дате добавления */
 
 .sort_by_date {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .sort_by_date label {
  margin-right: 5px;   /* Фраза "Сортировать по дате добавления:" */
- margin-bottom: 5px;
+ margin-bottom: 10px;
  display: inline-block;
 }
 .sort_by_date select {
-margin-right: 5px;    /* Кнопка по убыванию или по возрастанию */
+margin-bottom: 10px;    /* Кнопка по убыванию или по возрастанию */
 display: inline-block;
 }
+
+/* Кнопка сортировать */
 .sort_by_date button {
- margin-left: 5px;    /* Кнопка сортировать */
+
 }
 /* Расположение элементов относительно друг друга, без inline-block не сработает */
 
+/* Стиль для полей сортировки и загрузки фото */
+input[type="text"],
+textarea,
+select {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
 
+.upload {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 
-/* Работа c верхней панелью (шапкой) много настроек которые не стоит трогать*/
+/* Работа c верхней панелью (шапкой)*/
 .header {
   display: flex;
   flex-direction: row-reverse;
@@ -138,7 +155,7 @@ display: inline-block;
 }
 
 .header-bottom {
-  display: flex;
+  display: flex;   /* Расположение названия сайта и логотипа */
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -153,6 +170,10 @@ display: inline-block;
   margin-right: 15px;   /* Расстояние между элементами авторизации */
 }
 
+.logo img {
+  width: 70px;
+  height: auto;
+}
 
 
 /* Работа с модальным окном */
@@ -224,5 +245,5 @@ display: inline-block;
 }
 
 #modal-img {
-  margin-left: 10%;
+  margin-left: 13%;
 }

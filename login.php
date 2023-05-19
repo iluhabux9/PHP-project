@@ -31,7 +31,7 @@ if (mysqli_num_rows($result) == 1) {
     exit();
 } else {
     // если пользователь не найден, выводим ошибку
-    echo "Неверный логин или пароль";
+    header("Location: index.php?error=1");
 }
 
 // закрываем подключение
