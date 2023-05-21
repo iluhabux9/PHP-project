@@ -108,8 +108,23 @@ display: inline-block;
 
 /* Кнопка сортировать */
 .sort_by_date button {
- 
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
+
+.sort_by_date button:hover {
+  background-color: #3e8e41;
+}
+
 /* Расположение элементов относительно друг друга, без inline-block не сработает */
 
 /* Стиль для полей сортировки и загрузки фото */
